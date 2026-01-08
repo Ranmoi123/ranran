@@ -1,0 +1,1102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <title>作品集網站</title>
+</head>
+
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top custom-nav">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#"><img style="width: 60px;" src="IMG/LOGO.png" alt="Logo"></a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">關於我</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="workDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            作品類型
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="workDropdown">
+                            <li><a class="dropdown-item" href="#gogo" onclick="highlightCard('card-graphic')">平面設計</a>
+                            </li>
+                            <li><a class="dropdown-item" href="#gogo" onclick="highlightCard('card-2d')">2D動畫</a></li>
+                            <li><a class="dropdown-item" href="#gogo" onclick="highlightCard('card-3d')">3D建模</a></li>
+                            <li><a class="dropdown-item" href="#gogo" onclick="highlightCard('card-illust')">插圖</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="#graphic-detail">平面設計</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#animation-detail">2D動畫</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#modeling-detail">3D建模</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#illustration-detail">插圖</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">聯絡我們</a></li>
+                </ul>
+                <form class="d-flex" onsubmit="return false;">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="button"
+                        style="color: #00e5bc; border-color: #00e5bc;">查詢</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <div class="banner" id="top">
+        <div id="bannerSlideshow">
+            <div class="slide active">
+                <video autoplay muted loop playsinline class="bg-media">
+                    <source src="IMG/b3.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="slide">
+                <img src="IMG/b1.jpg" class="bg-media" alt="b1">
+            </div>
+            <div class="slide">
+                <img src="IMG/b2.jpg" class="bg-media" alt="b2">
+            </div>
+            <div class="slide">
+                <video autoplay muted loop playsinline class="bg-media">
+                    <source src="IMG/b4.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="slide">
+                <img src="IMG/b5.jpg" class="bg-media" alt="b5">
+            </div>
+            <div class="slide">
+                <video autoplay muted loop playsinline class="bg-media">
+                    <source src="IMG/b6.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="slide">
+                <video autoplay muted loop playsinline class="bg-media">
+                    <source src="IMG/b7.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="slide">
+                <img src="IMG/b8.png" class="bg-media" alt="b8">
+            </div>
+            <div class="slide">
+                <img src="IMG/b9.png" class="bg-media" alt="b9">
+            </div>
+            <div class="slide">
+                <video autoplay muted loop playsinline class="bg-media">
+                    <source src="IMG/b10.mp4" type="video/mp4">
+                </video>
+            </div>
+
+            <div class="video-overlay"></div>
+        </div>
+
+        <div class="content">
+            <div class="banner-txt">
+                <h1><small>Design</small>PORTFOLIO</h1>
+                <h2>2023&nbsp──&nbsp2025</h2>
+            </div>
+        </div>
+    </div>
+
+    <!-- 關於我 -->
+    <div class="about reveal" id="about">
+        <h1 class="section-title">#ABOUT ME</h1>
+        <div class="container">
+            <div class="row align-items-center justify-content-center g-5">
+                <div class="col-md-5">
+                    <div class="card">
+                        <img src="IMG/01.PNG" alt="Image" class="card-img">
+                    </div>
+                </div>
+                <div class="col-md-5">
+                    <div class="profile-content text-white">
+                        <h2 class="name">吳 宇 璿</h2>
+                        <p class="en-name">Wu Yu Xuan</p>
+
+                        <div class="info-box">
+                            <h4 class="info-title">Experience</h4>
+                            <p>#國立雲林科技大學 數位媒體設計系 stud.</p>
+                            <p>#國立嘉義高級商業職業學校 廣告設計科 grad.</p>
+                        </div>
+
+                        <div class="info-box mt-4">
+                            <h4 class="info-title">Certification</h4>
+                            <p>#視覺傳達設計丙級</p>
+                            <p>#印前製程-圖文組版 PC 丙級</p>
+                            <p>#印前製程-圖文組版 PC 乙級</p>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 字卡 -->
+    <div class="portfolio-shortcuts reveal">
+        <div class="container" id="gogo">
+            <h1 class="section-title title-reverse">#WORK TYPE</h1>
+
+            <div class="row g-4 justify-content-center">
+
+                <div class="col-6 col-md-3" id="card-graphic">
+                    <a href="#graphic-detail" class="work-card">
+                        <div class="card-content">
+                            <div class="work-card-img">
+                                <img src="IMG/李模擬.jpg" alt="平面設計">
+                            </div>
+                            <h3>Graphic Design</h3>
+                            <p>平面設計</p>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-6 col-md-3" id="card-2d">
+                    <a href="#animation-detail" class="work-card">
+                        <div class="card-content">
+                            <div class="work-card-img">
+                                <video autoplay muted loop playsinline poster="IMG/video-fallback.jpg">
+                                    <source src="IMG/2d.mp4" type="video/mp4">
+                                    您的瀏覽器不支援影片標籤。
+                                </video>
+                            </div>
+                            <h3>2D Animation</h3>
+                            <p>2D動畫</p>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-6 col-md-3" id="card-3d">
+                    <a href="#modeling-detail" class="work-card">
+                        <div class="card-content">
+                            <div class="work-card-img">
+                                <img src="IMG/003.png" alt="3D Modeling">
+                            </div>
+                            <h3>3D Modeling</h3>
+                            <p>3D建模</p>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-6 col-md-3" id="card-illust"> <a href="#illustration-detail" class="work-card">
+                        <div class="card-content">
+                            <div class="work-card-img">
+                                <img src="IMG/場景設計-承.jpg" alt="Illustration">
+                            </div>
+                            <h3>Illustration</h3>
+                            <p>插畫</p>
+                        </div>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- 平面設計 -->
+    <section class="graphic-works" id="graphic-detail" style="background-color: #000 !important;">
+        <div class="container">
+            <h1 class="section-title" style="color: #fff;">#GRAPHIC DESIGN</h1>
+
+            <div class="theme-header mb-5">
+                <h2 class="theme-title">01. 招牌再造系列 <span class="en-sub">/ Signage Remake</span></h2>
+            </div>
+
+            <div class="row align-items-center signage-row mb-5 reveal">
+
+                <div class="col-md-7">
+                    <div class="signage-container">
+                        <div class="signage-layer layer-design">
+                            <img src="IMG/招牌-李東記.png" alt="李東記設計圖">
+                        </div>
+                        <div class="signage-layer layer-mockup">
+                            <img src="IMG/李模擬.jpg" alt="李東記實景圖">
+                        </div>
+
+                        <div class="corner-tag">Project: Li Tong Gji</div>
+                        <div class="hover-hint">💡 滑鼠懸停切換實景</div>
+                    </div>
+                </div>
+
+                <div class="col-md-5">
+                    <div class="work-info ps-md-4">
+                        <h3 class="work-sub-title">李東記肉骨茶</h3>
+                        <p class="work-desc">運用沈穩的深褐與金棕色調，重新轉化傳統商標。透過幾何線條，提升品牌在現代街景中的視覺質感。</p>
+                        <div class="work-meta">
+                            <div class="meta-group">
+                                <strong>色票組合：</strong>
+                                <div class="color-palette">
+                                    <span class="swatch" style="background-color: #3a2822;" title="深褐底色"></span>
+                                    <span class="swatch" style="background-color: #e0c895;" title="金棕字體"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="row align-items-center signage-row mb-5 reveal">
+
+                <div class="col-md-5">
+                    <div class="work-info pe-md-4 text-start">
+                        <h3 class="work-sub-title"
+                            style="color: #00e5bc; border-left: 4px solid #ff2d8c; padding-left: 15px;">
+                            十畝田 滷味專賣
+                        </h3>
+                        <p class="work-desc" style="color: rgba(255,255,255,0.8); line-height: 1.8;">
+                            重新整理原本繁瑣的文字資訊，將目光聚焦於核心商標，提升品牌識別度。
+                        </p>
+                        <div class="work-meta">
+                            <div class="meta-group">
+                                <strong>視覺色票：</strong>
+                                <div class="color-palette d-inline-flex gap-2">
+                                    <span class="swatch" style="background-color: #fae3cf;" title="米膚底色"></span>
+                                    <span class="swatch" style="background-color: #4a1210;" title="深紅主字"></span>
+                                    <span class="swatch" style="background-color: #e60012;" title="亮紅點綴"></span>
+                                    <span class="swatch" style="background-color: #ffca00;" title="黃色點綴"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-7">
+                    <div class="signage-container">
+                        <div class="signage-layer layer-design">
+                            <img src="IMG/招牌-十畝田.png" alt="十畝田設計圖" class="img-fluid">
+                        </div>
+                        <div class="signage-layer layer-mockup">
+                            <img src="IMG/十畝田.jpg" alt="十畝田實景圖" class="img-fluid">
+                        </div>
+                        <div class="corner-tag">Project: Li Tong Gji</div>
+                        <div class="hover-hint">💡 滑鼠懸停切換實景</div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="theme-header mt-5 mb-5">
+                <h2 class="theme-title">02. 姓名海報設計 <span class="en-sub">/ Name Poster</span></h2>
+            </div>
+
+            <div class="row align-items-center mb-5 reveal">
+                <div class="col-md-5">
+                    <div class="poster-container">
+                        <img src="IMG/海報1 (1).jpg" alt="海報 01" class="poster-img">
+                        <div class="poster-glow-bg"></div>
+                    </div>
+                </div>
+                <div class="col-md-7 ps-md-5">
+                    <div class="work-info">
+                        <h3 class="work-sub-title">霓虹字體視覺設計</h3>
+                        <p class="work-desc">以展示想像力為核心，融合現代霓虹燈管與幾何圖形，展現出強烈的賽博龐克（Cyberpunk）未來感。</p>
+                        <div class="work-meta">
+                            <div class="meta-group">
+                                <strong>視覺色票：</strong>
+                                <div class="color-palette">
+                                    <span class="swatch"
+                                        style="background-color: #ff2d8c; box-shadow: 0 0 10px #ff2d8c;"></span>
+                                    <span class="swatch"
+                                        style="background-color: #00e5bc; box-shadow: 0 0 10px #00e5bc;"></span>
+                                    <span class="swatch"
+                                        style="background-color: #fff100; box-shadow: 0 0 10px #fff100;"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 修正：將星雲海報的圖片移到右邊，文字移到左邊 -->
+            <div class="row align-items-center mb-5 reveal">
+                <div class="col-md-7 pe-md-5">
+                    <div class="work-info">
+                        <h3 class="work-sub-title">夢幻星雲排版設計</h3>
+                        <p class="work-desc">運用漸層紫色與月相元素，營造出靜謐而神祕的氛圍。結合柔和的襯線體字型，透過海報了解我的個性。</p>
+                        <div class="work-meta">
+                            <div class="meta-group">
+                                <strong>視覺色票：</strong>
+                                <div class="color-palette">
+                                    <span class="swatch" style="background-color: #7d5bb2;"></span>
+                                    <span class="swatch" style="background-color: #f7a072;"></span>
+                                    <span class="swatch" style="background-color: #2c2c54;"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-5">
+                    <div class="poster-container">
+                        <img src="IMG/海報1 (2).jpg" alt="海報 02" class="poster-img">
+                        <div class="poster-glow-bg second"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2d動畫 -->
+    <section class="animation-works reveal" id="animation-detail">
+        <div class="container">
+            <h1 class="section-title title-reverse">#2D ANIMATION</h1>
+
+            <div class="work-item mb-5">
+                <div class="row mb-3">
+                    <div class="col-md-8">
+                        <h3 class="work-sub-title">《UNBOOK?》</h3>
+                        <p class="work-desc">這是一段關於女主Ruby在書店展開的奇幻故事。</p>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="work-meta top-meta">
+                            <span><strong>項目分工：</strong> 導演、原畫、動仕、背景</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="video-container">
+                    <video loop playsinline controls class="sketch-video">
+                        <source src="IMG/UNBOOK.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+
+            <div class="work-item mb-5">
+                <div class="row mb-3">
+                    <div class="col-md-8">
+                        <h3 class="work-sub-title">MINE! MINE! MINE!</h3>
+                        <p class="work-desc">描述一對姐弟在風雨交加獨自守在家的故事。</p>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="work-meta top-meta">
+                            <span><strong>項目分工：</strong> 導演、總監督、原畫、動仕、合成</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="video-container">
+                    <video loop playsinline controls class="sketch-video">
+                        <source src="IMG/Mine! Mine! Mine!.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+
+            <div class="sketches-section reveal">
+                <h2 class="sketch-title"><img src="IMG/pin.png" style="width:24px;"> Animation Sketches</h2>
+                <div class="row g-2">
+                    <div class="col-6 col-md-3">
+                        <div class="sketch-item">
+                            <div class="sketch-card">
+                                <video autoplay muted loop playsinline class="sketch-video">
+                                    <source src="IMG/走路動畫(正+側) .MP4" type="video/mp4">
+                                </video>
+                            </div>
+                            <div class="sketch-label">走路循環</div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-3">
+                        <div class="sketch-item">
+                            <div class="sketch-card">
+                                <video autoplay muted loop playsinline class="sketch-video">
+                                    <source src="IMG/跑步動畫（正+側）_瑕疵修正.MP4" type="video/mp4">
+                                </video>
+                            </div>
+                            <div class="sketch-label">跑步循環</div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-3">
+                        <div class="sketch-item">
+                            <div class="sketch-card">
+                                <video autoplay muted loop playsinline class="sketch-video">
+                                    <source src="IMG/2d.mp4" type="video/mp4">
+                                </video>
+                            </div>
+                            <div class="sketch-label">髮飄原畫</div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-3">
+                        <div class="sketch-item">
+                            <div class="sketch-card">
+                                <video autoplay muted loop playsinline class="sketch-video">
+                                    <source src="IMG/搬東西 (1).mp4" type="video/mp4">
+                                </video>
+                            </div>
+                            <div class="sketch-label">搬東西</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3d建模 -->
+    <section class="modeling-works" id="modeling-detail">
+        <div class="container">
+            <h1 class="section-title">#3D MODELING</h1>
+
+            <div class="row g-4">
+                <div class="col-12 mb-5">
+                    <div class="modeling-card">
+                        <div class="card-header-info">
+                            <h3 class="work-sub-title">角色建模：[紅孩兒]</h3>
+                            <p class="work-desc">初次嘗試角色建模，從草圖設計到建模貼圖，做出完整模型。</p>
+                            <div class="work-meta top-meta">
+                                <span><strong>使用工具：</strong> Maya/ Arnold</span>
+                            </div>
+                        </div>
+
+                        <div class="row g-3 mt-4">
+                            <div class="col-md-4">
+                                <div class="modeling-img-item">
+                                    <div class="modeling-img-box">
+                                        <img src="IMG/03_B11232043_三視圖.png" alt="正面三視圖">
+                                    </div>
+                                    <div class="img-label">三視圖展示</div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="modeling-img-item">
+                                    <div class="modeling-img-box">
+                                        <img src="IMG/01_B11232043_三個動作.png" alt="側面細節">
+                                    </div>
+                                    <div class="img-label">三種動作</div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="modeling-img-item">
+                                    <div class="modeling-img-box">
+                                        <img src="IMG/02_B11232043_獨照.png" alt="渲染成品">
+                                    </div>
+                                    <div class="img-label">渲染成品</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="modeling-card mini-card">
+                        <h3 class="work-sub-title">場景建模：[童年陰影]</h3>
+                        <div class="video-container mini-video">
+                            <video loop playsinline controls class="sketch-video">
+                                <source src="IMG/B11232043_童年陰影影片.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                        <div class="work-meta mt-3">
+                            <span><strong>工具：</strong> Maya / Arnold</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="modeling-card mini-card">
+                        <h3 class="work-sub-title">2D轉3D作品</h3>
+                        <div class="video-container mini-video">
+                            <video loop playsinline controls class="sketch-video">
+                                <source src="IMG/b301.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                        <div class="work-meta mt-3">
+                            <span><strong>工具：</strong> Maya / Procreate</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 插圖 -->
+    <section class="illustration-works reveal" id="illustration-detail">
+        <div class="container">
+            <h1 class="section-title">#ILLUSTRATION</h1>
+
+            <div class="work-item mb-5">
+                <h3 class="work-sub-title">魔女的異都旅行</h3>
+                <p class="work-desc">運用四格敘事手法呈現故事脈絡，建立完整的世界觀。</p>
+                <div class="row g-3 " id="story-flip-container">
+                    <div class="col-6 col-md-3">
+                        <div class="story-item" data-bs-toggle="modal" data-bs-target="#modalStory1"
+                            style="cursor: pointer;">
+                            <div class="modeling-img-box"><img src="IMG/場景設計-起.jpg" alt="起"></div>
+                            <div class="img-label">起：世界</div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-3">
+                        <div class="story-item" data-bs-toggle="modal" data-bs-target="#modalStory2"
+                            style="cursor: pointer;">
+                            <div class="modeling-img-box"><img src="IMG/場景設計-承.jpg" alt="承"></div>
+                            <div class="img-label">承：初見異都</div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-3">
+                        <div class="story-item" data-bs-toggle="modal" data-bs-target="#modalStory3"
+                            style="cursor: pointer;">
+                            <div class="modeling-img-box"><img src="IMG/b1.jpg" alt="轉"></div>
+                            <div class="img-label">轉：異都探險</div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-3">
+                        <div class="story-item" data-bs-toggle="modal" data-bs-target="#modalStory4"
+                            style="cursor: pointer;">
+                            <div class="modeling-img-box"><img src="IMG/場景設計-合.jpg" alt="合"></div>
+                            <div class="img-label">合：故事終章</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <hr style="border-color: rgba(255,255,255,0.1); margin: 60px 0;">
+
+            <div class="work-item mb-5">
+                <h3 class="work-sub-title">賀卡設計系列 (Christmas & New Year)</h3>
+                <p class="work-desc">正反面一組展示，隨時間自動切換不同色調氛圍。</p>
+
+                <div class="row g-4 align-items-stretch">
+                    <div class="col-md-6">
+                        <div id="carouselChristmas" class="carousel slide carousel-fade card-carousel christmas-box"
+                            data-bs-ride="carousel" data-bs-interval="3500">
+                            <div class="carousel-indicators custom-indicators">
+                                <button type="button" data-bs-target="#carouselChristmas" data-bs-slide-to="0"
+                                    class="active"></button>
+                                <button type="button" data-bs-target="#carouselChristmas" data-bs-slide-to="1"></button>
+                                <button type="button" data-bs-target="#carouselChristmas" data-bs-slide-to="2"></button>
+                                <button type="button" data-bs-target="#carouselChristmas" data-bs-slide-to="3"></button>
+                            </div>
+                            <div class="carousel-inner">
+                                <h4 class="text-center mb-4" style="color: #ffb1d4;">Christmas Series</h4>
+                                <div class="carousel-item active">
+                                    <div class="card-pair-wrapper">
+                                        <img src="IMG/聖誕卡片1.jpg" class="card-img-pair" alt="聖誕1正">
+                                        <img src="IMG/聖誕卡片11.jpg" class="card-img-pair" alt="聖誕1反">
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <div class="card-pair-wrapper">
+                                        <img src="IMG/聖誕卡片2.jpg" class="card-img-pair" alt="聖誕2正">
+                                        <img src="IMG/聖誕卡片21.jpg" class="card-img-pair" alt="聖誕2反">
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <div class="card-pair-wrapper">
+                                        <img src="IMG/聖誕卡片3.jpg" class="card-img-pair" alt="聖誕3正">
+                                        <img src="IMG/聖誕卡片31.jpg" class="card-img-pair" alt="聖誕3反">
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <div class="card-pair-wrapper">
+                                        <img src="IMG/聖誕卡片4.jpg" class="card-img-pair" alt="聖誕4正">
+                                        <img src="IMG/聖誕卡片41.jpg" class="card-img-pair" alt="聖誕4反">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div id="carouselNewYear" class="carousel slide carousel-fade card-carousel newyear-box"
+                            data-bs-ride="carousel" data-bs-interval="3500">
+                            <div class="carousel-indicators custom-indicators">
+                                <button type="button" data-bs-target="#carouselNewYear" data-bs-slide-to="0"
+                                    class="active"></button>
+                                <button type="button" data-bs-target="#carouselNewYear" data-bs-slide-to="1"></button>
+                                <button type="button" data-bs-target="#carouselNewYear" data-bs-slide-to="2"></button>
+                                <button type="button" data-bs-target="#carouselNewYear" data-bs-slide-to="3"></button>
+                            </div>
+                            <div class="carousel-inner">
+                                <h4 class="text-center mb-4" style="color: #b1ffed;">New Year Series</h4>
+                                <div class="carousel-item active">
+                                    <div class="card-pair-wrapper">
+                                        <img src="IMG/新年卡片1.jpg" class="card-img-pair" alt="新年1正">
+                                        <img src="IMG/新年卡片11.jpg" class="card-img-pair" alt="新年1反">
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <div class="card-pair-wrapper">
+                                        <img src="IMG/新年卡片2.jpg" class="card-img-pair" alt="新年2正">
+                                        <img src="IMG/新年卡片21.jpg" class="card-img-pair" alt="新年2反">
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <div class="card-pair-wrapper">
+                                        <img src="IMG/新年卡片3.jpg" class="card-img-pair" alt="新年3正">
+                                        <img src="IMG/新年卡片31.jpg" class="card-img-pair" alt="新年3反">
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <div class="card-pair-wrapper">
+                                        <img src="IMG/新年卡片4.jpg" class="card-img-pair" alt="新年4正">
+                                        <img src="IMG/新年卡片41.jpg" class="card-img-pair" alt="新年4反">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <hr style="border-color: rgba(255,255,255,0.1); margin: 60px 0;">
+
+            <div class="work-item">
+                <h3 class="work-sub-title">遊戲概念設計</h3>
+
+                <div class="game-main mb-5">
+                    <div class="modeling-img-box" style="aspect-ratio: 16/9;">
+                        <img src="IMG/game.png" alt="Game UI">
+                    </div>
+                    <div class="img-label mt-3" style="font-size: large;">遊戲 UI 介面整體設計</div>
+                </div>
+
+                <div class="character-section">
+                    <h4 class="work-sub-title character-title"># 角色設定</h4>
+
+                    <div class="character-img-container">
+                        <img src="IMG/角色設計.png" alt="角色設定">
+                    </div>
+
+                    <div class="row g-0 text-center character-labels">
+                        <div class="col-4">
+                            <div class="img-label">主角</div>
+                        </div>
+                        <div class="col-4">
+                            <div class="img-label">小怪群</div>
+                        </div>
+                        <div class="col-4">
+                            <div class="img-label">BOSS</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 聯絡我們 -->
+    <section class="contact-section reveal" id="contact">
+        <div class="container">
+            <h1 class="section-title">#CONTACT US</h1>
+
+            <div class="row g-5 align-items-start">
+                <!-- 左側：聯絡表單 -->
+                <div class="col-lg-6">
+                    <div class="contact-form-container">
+                        <h3 class="contact-subtitle">
+                            <img src="IMG/envelope.png" alt="信封" class="contact-icon">
+                            聯絡我們
+                        </h3>
+
+                        <form action="#" method="POST" class="contact-form">
+                            <div class="form-group mb-4">
+                                <label for="contact-name" class="form-label">
+                                    <img src="IMG/home.png" alt="姓名" class="input-icon">
+                                    姓名
+                                </label>
+                                <input type="text" id="contact-name" name="name" class="form-control"
+                                    placeholder="請輸入您的姓名" required>
+                            </div>
+
+                            <div class="form-group mb-4">
+                                <label for="contact-email" class="form-label">
+                                    <img src="IMG/envelope.png" alt="郵件" class="input-icon">
+                                    電子郵件
+                                </label>
+                                <input type="email" id="contact-email" name="email" class="form-control"
+                                    placeholder="example@gmail.com" required>
+                            </div>
+
+                            <div class="form-group mb-4">
+                                <label for="contact-message" class="form-label">
+                                    <img src="IMG/pin.png" alt="訊息" class="input-icon">
+                                    訊息內容
+                                </label>
+                                <textarea id="contact-message" name="message" class="form-control" rows="5"
+                                    placeholder="請輸入您的問題或建議..." required></textarea>
+                            </div>
+
+                            <div class="form-footer d-flex justify-content-between align-items-center">
+                                <div class="captcha-container">
+                                    <img src="IMG/whatsapp.png" alt="驗證" class="captcha-icon">
+                                    <span class="captcha-text">請確認您不是機器人</span>
+                                </div>
+                                <button type="submit" class="submit-btn">
+                                    <img src="IMG/Send--Streamline-Mynaui (1).png" alt="送出" class="send-icon">
+                                    送出訊息
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- 右側：官方資訊 -->
+                <div class="col-lg-6">
+                    <div class="info-container">
+                        <h3 class="contact-subtitle">
+                            <img src="IMG/home.png" alt="官方資訊" class="contact-icon">
+                            官方資訊
+                        </h3>
+
+                        <div class="info-grid">
+                            <div class="info-card">
+                                <div class="info-icon-box">
+                                    <img src="IMG/home.png" alt="單位名稱" class="info-icon">
+                                </div>
+                                <div class="info-content">
+                                    <h4 class="info-title">單位名稱</h4>
+                                    <p class="info-text">設計提案與作品集</p>
+                                </div>
+                            </div>
+
+                            <div class="info-card">
+                                <div class="info-icon-box">
+                                    <img src="IMG/envelope.png" alt="官方信箱" class="info-icon">
+                                </div>
+                                <div class="info-content">
+                                    <h4 class="info-title">官方信箱</h4>
+                                    <p class="info-text">A123@gmail.com</p>
+                                </div>
+                            </div>
+
+                            <div class="info-card">
+                                <div class="info-icon-box">
+                                    <img src="IMG/pin.png" alt="單位地址" class="info-icon">
+                                </div>
+                                <div class="info-content">
+                                    <h4 class="info-title">單位地址</h4>
+                                    <p class="info-text">雲林縣斗六市大學路三段123號</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 社交媒體區塊 -->
+                        <div class="social-section mt-5">
+                            <h3 class="contact-subtitle">
+                                <img src="IMG/instagram.png" alt="關注我們" class="contact-icon">
+                                關注我們
+                            </h3>
+
+                            <div class="social-grid">
+                                <a href="https://x.com/ran_ran233" class="social-card twitter">
+                                    <div class="social-icon-box">
+                                        <img src="IMG/twitter.png" alt="Twitter" class="social-icon">
+                                    </div>
+                                    <div class="social-content">
+                                        <h4 class="social-title">Twitter</h4>
+                                        <p class="social-text">@ran_ran233</p>
+                                    </div>
+                                </a>
+
+                                <a href="https://www.facebook.com/wu.yu.xuan.677531/?locale=zh_TW"
+                                    class="social-card facebook">
+                                    <div class="social-icon-box">
+                                        <img src="IMG/facebook.png" alt="Facebook" class="social-icon">
+                                    </div>
+                                    <div class="social-content">
+                                        <h4 class="social-title">Facebook</h4>
+                                        <p class="social-text">@吳宇璿</p>
+                                    </div>
+                                </a>
+
+                                <a href="https://www.instagram.com/ran_ran233/" class="social-card instagram">
+                                    <div class="social-icon-box">
+                                        <img src="IMG/instagram.png" alt="Instagram" class="social-icon">
+                                    </div>
+                                    <div class="social-content">
+                                        <h4 class="social-title">Instagram</h4>
+                                        <p class="social-text">@ran_ran233</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 底部裝飾 -->
+            <div class="contact-footer mt-5">
+                <div class="footer-divider">
+                    <div class="divider-line"></div>
+                    <img src="IMG/LOGO.png" alt="Logo" class="footer-logo">
+                    <div class="divider-line"></div>
+                </div>
+                <p class="copyright">© 2023-2025 Design Portfolio. All rights reserved.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 模態框部分保持不變 -->
+    <div class="modal fade" id="modalStory1" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-centered">
+            <div class="modal-content bg-dark text-white" style="border: 1px solid #ff2d8c; border-radius: 20px;">
+                <div class="modal-body p-0">
+                    <button type="button" class="btn-close btn-close-white position-absolute end-0 top-0 m-3"
+                        data-bs-dismiss="modal"></button>
+                    <div class="row g-0">
+                        <div class="col-md-8">
+                            <img src="IMG/場景設計-起.jpg" class="img-fluid" style="border-radius: 20px 0 0 20px;">
+                        </div>
+                        <div class="col-md-4 p-4 d-flex flex-column justify-content-center">
+                            <h2 style="color: #ff2d8c;">起：世界</h2>
+                            <hr style="border-color: rgba(255,45,140,0.3)">
+                            <p class="lead">女主的世界觀為奇幻世界，有許多的植物環繞在這裡。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modalStory2" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-centered">
+            <div class="modal-content bg-dark text-white" style="border: 1px solid #ff2d8c; border-radius: 20px;">
+                <div class="modal-body p-0">
+                    <button type="button" class="btn-close btn-close-white position-absolute end-0 top-0 m-3"
+                        data-bs-dismiss="modal"></button>
+                    <div class="row g-0">
+                        <div class="col-md-8">
+                            <img src="IMG/場景設計-承.jpg" class="img-fluid" style="border-radius: 20px 0 0 20px;">
+                        </div>
+                        <div class="col-md-4 p-4 d-flex flex-column justify-content-center">
+                            <h2 style="color: #ff2d8c;">承：初見異都</h2>
+                            <hr style="border-color: rgba(255,45,140,0.3)">
+                            <p class="lead">在房間忽然啟動了魔法陣，女主被傳送到了陌生的地方。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modalStory3" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-centered">
+            <div class="modal-content bg-dark text-white" style="border: 1px solid #ff2d8c; border-radius: 20px;">
+                <div class="modal-body p-0">
+                    <button type="button" class="btn-close btn-close-white position-absolute end-0 top-0 m-3"
+                        data-bs-dismiss="modal"></button>
+                    <div class="row g-0">
+                        <div class="col-md-8">
+                            <img src="IMG/b1.jpg" class="img-fluid" style="border-radius: 20px 0 0 20px;">
+                        </div>
+                        <div class="col-md-4 p-4 d-flex flex-column justify-content-center">
+                            <h2 style="color: #ff2d8c;">轉：異都探險</h2>
+                            <hr style="border-color: rgba(255,45,140,0.3)">
+                            <p class="lead">手拿著在原世界的地圖，試著找到回去的方法。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modalStory4" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-centered">
+            <div class="modal-content bg-dark text-white" style="border: 1px solid #ff2d8c; border-radius: 20px;">
+                <div class="modal-body p-0">
+                    <button type="button" class="btn-close btn-close-white position-absolute end-0 top-0 m-3"
+                        data-bs-dismiss="modal"></button>
+                    <div class="row g-0">
+                        <div class="col-md-8">
+                            <img src="IMG/場景設計-合.jpg" class="img-fluid" style="border-radius: 20px 0 0 20px;">
+                        </div>
+                        <div class="col-md-4 p-4 d-flex flex-column justify-content-center">
+                            <h2 style="color: #ff2d8c;">合：故事終章</h2>
+                            <hr style="border-color: rgba(255,45,140,0.3)">
+                            <p class="lead">發現世界樹在異都已呈枯樹，接下來女主要何去何從?</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // 你的所有 JavaScript 程式碼保持不變
+        // 修正：卡片高亮效果函數
+        function highlightCard(cardId) {
+            const target = document.getElementById(cardId);
+
+            const navbarCollapse = document.getElementById('navbarSupportedContent');
+            if (navbarCollapse && navbarCollapse.classList.contains('show')) {
+                const bsCollapse = bootstrap.Collapse.getInstance(navbarCollapse) || new bootstrap.Collapse(navbarCollapse);
+                bsCollapse.hide();
+            }
+
+            if (target) {
+                setTimeout(() => {
+                    const offset = 80;
+                    const elementPosition = target.getBoundingClientRect().top + window.pageYOffset;
+                    const offsetPosition = elementPosition - offset;
+
+                    window.scrollTo({
+                        top: offsetPosition,
+                        behavior: 'smooth'
+                    });
+
+                    const workCard = target.querySelector('.work-card');
+                    if (workCard) {
+                        workCard.classList.add('card-highlight');
+                        setTimeout(() => {
+                            workCard.classList.remove('card-highlight');
+                        }, 2000);
+                    }
+                }, 350);
+            }
+        }
+
+        // 2. Banner 輪播功能 (修正影片同步問題)
+        function initBannerSlideshow() {
+            const slides = document.querySelectorAll('#bannerSlideshow .slide');
+            if (slides.length === 0) return;
+            let currentSlide = 0;
+
+            function nextSlide() {
+                const current = slides[currentSlide];
+                currentSlide = (currentSlide + 1) % slides.length;
+                const next = slides[currentSlide];
+
+                // 處理影片預載與重播
+                const nextVideo = next.querySelector('video');
+                if (nextVideo) {
+                    nextVideo.currentTime = 0;
+                    nextVideo.play().catch(() => { });
+                }
+
+                current.classList.remove('active');
+                next.classList.add('active');
+            }
+            setInterval(nextSlide, 5000);
+        }
+
+        document.addEventListener('DOMContentLoaded', function () {
+            // A. 輪播初始化
+            initBannerSlideshow();
+
+            // B. 導覽列點擊收合（行動裝置）
+            const navbarCollapse = document.getElementById('navbarSupportedContent');
+            const navLinks = document.querySelectorAll('.navbar-nav .nav-link:not(.dropdown-toggle), .dropdown-item');
+
+            navLinks.forEach((link) => {
+                link.addEventListener('click', () => {
+                    if (window.innerWidth < 992 && navbarCollapse.classList.contains('show')) {
+                        const bsCollapse = bootstrap.Collapse.getInstance(navbarCollapse) || new bootstrap.Collapse(navbarCollapse);
+                        bsCollapse.hide();
+                    }
+                });
+            });
+
+            // C. 翻轉動畫效果
+            const flipContainer = document.getElementById('story-flip-container');
+            if (flipContainer) {
+                flipContainer.querySelectorAll('.story-item').forEach(item => {
+                    item.addEventListener('click', function () {
+                        const targetModalId = this.getAttribute('data-bs-target');
+                        if (!targetModalId) return;
+
+                        const modalElement = document.querySelector(targetModalId);
+
+                        // 執行翻轉動畫
+                        this.classList.add('flip-effect');
+
+                        // 監聽動畫結束事件
+                        const handleAnimationEnd = () => {
+                            if (modalElement) {
+                                const myModal = bootstrap.Modal.getOrCreateInstance(modalElement);
+                                myModal.show();
+
+                                modalElement.addEventListener('hidden.bs.modal', () => {
+                                    this.classList.remove('flip-effect');
+                                }, { once: true });
+                            }
+                        };
+
+                        // 添加動畫結束監聽器
+                        this.addEventListener('animationend', handleAnimationEnd, { once: true });
+
+                        // 備用方案：如果動畫事件沒有觸發，仍然顯示 modal
+                        setTimeout(() => {
+                            if (!this.classList.contains('flip-effect')) return;
+
+                            if (modalElement) {
+                                const myModal = bootstrap.Modal.getOrCreateInstance(modalElement);
+                                myModal.show();
+
+                                modalElement.addEventListener('hidden.bs.modal', () => {
+                                    this.classList.remove('flip-effect');
+                                }, { once: true });
+                            }
+
+                            // 移除事件監聽器
+                            this.removeEventListener('animationend', handleAnimationEnd);
+                        }, 1);
+                    });
+                });
+            }
+
+            // D. Reveal 滾動顯現
+            const revealCallback = (entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                        const items = entry.target.querySelectorAll('.story-item, .game-main, .sketch-item, .work-item, .card-img-pair');
+                        items.forEach((item, index) => {
+                            setTimeout(() => {
+                                item.style.opacity = "1";
+                                item.style.transform = "translateY(0) scale(1)";
+                            }, index * 100);
+                        });
+                        observer.unobserve(entry.target);
+                    }
+                });
+            };
+            const revealObserver = new IntersectionObserver(revealCallback, { threshold: 0.1 });
+            document.querySelectorAll('.reveal').forEach(section => revealObserver.observe(section));
+
+            // E. 燈箱功能
+            const setupLightbox = () => {
+                let lightbox = document.getElementById('lightbox');
+                if (!lightbox) {
+                    lightbox = document.createElement('div');
+                    lightbox.id = 'lightbox';
+                    lightbox.style.display = 'none';
+                    lightbox.innerHTML = `<div class="lightbox-content"><img id="lightbox-img" src=""><span class="lightbox-close">&times;</span></div>`;
+                    document.body.appendChild(lightbox);
+                }
+
+                const lightboxImg = document.getElementById('lightbox-img');
+                document.querySelectorAll('.card-img-pair, .game-main img, .work-img-box img, .modeling-img-box img').forEach(item => {
+                    item.addEventListener('click', function (e) {
+                        // 如果正在執行翻轉動畫，就不開燈箱
+                        if (this.closest('.story-item')) return;
+
+                        e.stopPropagation();
+                        lightboxImg.src = this.src || this.querySelector('img').src;
+                        lightbox.style.display = 'flex';
+                        document.body.style.overflow = 'hidden';
+                    });
+                });
+
+                lightbox.addEventListener('click', (e) => {
+                    if (e.target.id === 'lightbox' || e.target.classList.contains('lightbox-close')) {
+                        lightbox.style.display = 'none';
+                        document.body.style.overflow = 'auto';
+                    }
+                });
+            };
+            setupLightbox();
+        });
+    </script>
+
+
+</body>
+
+</html>
