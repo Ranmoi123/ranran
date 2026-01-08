@@ -1062,36 +1062,36 @@
             document.querySelectorAll('.reveal').forEach(section => revealObserver.observe(section));
 
             // E. 燈箱功能
-            const setupLightbox = () => {
-                let lightbox = document.getElementById('lightbox');
-                if (!lightbox) {
-                    lightbox = document.createElement('div');
-                    lightbox.id = 'lightbox';
+            const lightboxImg = document.getElementById('lightbox-img');
+            document.querySelectorAll('.card-img-pair, .game-main img, .work-img-box img, .modeling-img-box img').forEach(item => {
+                item.addEventListener('click', function (e) {
+                    // 如果正在執行翻轉動畫，就不開燈箱
+                    if (this.closest('.story-item')) return;
+
+                    e.stopPropagation();
+                    lightboxImg.src = this.src || this.querySelector('img').src;
+                    lightbox.style.display = 'flex';
+                    document.body.style.overflow = 'hidden';
+                    console.log('燈箱顯示，body overflow 設為 hidden');
+                });
+            });
+
+            lightbox.addEventListener('click', (e) => {
+                if (e.target.id === 'lightbox' || e.target.classList.contains('lightbox-close')) {
                     lightbox.style.display = 'none';
-                    lightbox.innerHTML = `<div class="lightbox-content"><img id="lightbox-img" src=""><span class="lightbox-close">&times;</span></div>`;
-                    document.body.appendChild(lightbox);
+                    document.body.style.overflow = 'auto';
+                    console.log('燈箱關閉，body overflow 設為 auto');
                 }
+            });
 
-                const lightboxImg = document.getElementById('lightbox-img');
-                document.querySelectorAll('.card-img-pair, .game-main img, .work-img-box img, .modeling-img-box img').forEach(item => {
-                    item.addEventListener('click', function (e) {
-                        // 如果正在執行翻轉動畫，就不開燈箱
-                        if (this.closest('.story-item')) return;
-
-                        e.stopPropagation();
-                        lightboxImg.src = this.src || this.querySelector('img').src;
-                        lightbox.style.display = 'flex';
-                        document.body.style.overflow = 'hidden';
-                    });
-                });
-
-                lightbox.addEventListener('click', (e) => {
-                    if (e.target.id === 'lightbox' || e.target.classList.contains('lightbox-close')) {
-                        lightbox.style.display = 'none';
-                        document.body.style.overflow = 'auto';
-                    }
-                });
-            };
+            // 添加 ESC 鍵關閉功能
+            document.addEventListener('keydown', function (e) {
+                if (e.key === 'Escape' && lightbox.style.display === 'flex') {
+                    lightbox.style.display = 'none';
+                    document.body.style.overflow = 'auto';
+                    console.log('按下 ESC，燈箱關閉，body overflow 設為 auto');
+                }
+            });
             setupLightbox();
         });
     </script>
